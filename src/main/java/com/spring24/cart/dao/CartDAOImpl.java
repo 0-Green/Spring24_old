@@ -28,12 +28,17 @@ public class CartDAOImpl  implements  CartDAO{
 	}
 	public boolean selectCountInCart(CartVO cartVO) throws DataAccessException {
 		String  result =sqlSession.selectOne("mapper.cart.selectCountInCart",cartVO);
+		
+		
+		
 		return Boolean.parseBoolean(result);
 	}
 
 	public void insertGoodsInCart(CartVO cartVO) throws DataAccessException{
 		int cart_id=selectMaxCartId();
 		cartVO.setCart_id(cart_id);
+		
+		
 		sqlSession.insert("mapper.cart.insertGoodsInCart",cartVO);
 	}
 	

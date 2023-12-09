@@ -35,6 +35,7 @@ public class CartControllerImpl extends BaseController implements CartController
 	private MemberVO memberVO;
 	
 	@RequestMapping(value="/myCartList.do" ,method = RequestMethod.GET)
+	
 	public ModelAndView myCartMain(HttpServletRequest request, HttpServletResponse response)  throws Exception {
 		String viewName=(String)request.getAttribute("viewName");
 		ModelAndView mav = new ModelAndView(viewName);
@@ -94,6 +95,10 @@ public class CartControllerImpl extends BaseController implements CartController
 		ModelAndView mav=new ModelAndView();
 		cartService.removeCartGoods(cart_id);
 		mav.setViewName("redirect:/cart/myCartList.do");
+	
+		
+		
+		
 		return mav;
 	}
 }
