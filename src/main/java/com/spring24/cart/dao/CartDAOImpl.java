@@ -28,6 +28,9 @@ public class CartDAOImpl  implements  CartDAO{
 	}
 	public boolean selectCountInCart(CartVO cartVO) throws DataAccessException {
 		String  result =sqlSession.selectOne("mapper.cart.selectCountInCart",cartVO);
+		
+		
+		
 		return Boolean.parseBoolean(result);
 	}
 
