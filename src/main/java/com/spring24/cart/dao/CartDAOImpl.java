@@ -37,6 +37,8 @@ public class CartDAOImpl  implements  CartDAO{
 	public void insertGoodsInCart(CartVO cartVO) throws DataAccessException{
 		int cart_id=selectMaxCartId();
 		cartVO.setCart_id(cart_id);
+		
+		
 		sqlSession.insert("mapper.cart.insertGoodsInCart",cartVO);
 	}
 	
