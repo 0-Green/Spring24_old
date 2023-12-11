@@ -100,4 +100,35 @@ public class GoodsControllerImpl extends BaseController   implements GoodsContro
 		session.setAttribute("quickGoodsList",quickGoodsList);
 		session.setAttribute("quickGoodsListNum", quickGoodsList.size());
 	}
+	
+	//전체상품조회리스트
+	// mapper,DAO,service,controller 모두 allGoodsList를 통해 main.jsp로 연동
+//	   @RequestMapping(value = "/allGoodsList.do", method = RequestMethod.GET)
+//	   public ModelAndView allGoodsList(HttpServletRequest request, HttpServletResponse response) throws Exception {
+//	      String viewName = (String) request.getAttribute("viewName");
+//	      List<GoodsVO> goodsList = goodsService.allGoodsList();
+//	      ModelAndView mav = new ModelAndView(viewName);
+//	      mav.addObject("goodsList", goodsList);
+//	      
+//	      System.out.println("Goods List: " + goodsList);
+//	      return mav;
+//	      
+//	   }
+	
+	//카테고리 메서드
+	//tiles에 정의, mapper 파일에 selectGoodsList로 매핑 -> DAO의 selectGoodsList 메서드 -> Service의  listGoods 메서드 -> Controller의 selectGoodsList
+	   @RequestMapping(value = "/selectGoodsList.do", method = RequestMethod.GET)
+	   public ModelAndView selectCategoryList(HttpServletRequest request, HttpServletResponse response,
+	           @RequestParam(value = "category", required = false, defaultValue = "traditional") String category) throws Exception {
+	       String viewName = (String) request.getAttribute("viewName");
+	       Map<String, List<GoodsVO>> goodsList = goodsService.listGoods();
+	       ModelAndView mav = new ModelAndView(viewName);
+	       mav.addObject("goodsList", goodsList);
+	       mav.addObject("category", category); 
+	       
+	       System.out.println("Category: " + category);
+	       System.out.println("Goods List: " + goodsList);
+	       
+	       return mav;
+	   }
 }

@@ -63,4 +63,9 @@ public class GoodsServiceImpl implements GoodsService{
 	}
 	
 	
+//	   public List<GoodsVO> allGoodsList() throws Exception{
+//		      List allgoodsList=goodsDAO.allGoodsList();
+//		      return allgoodsList;
+//		   }
+	
 }
