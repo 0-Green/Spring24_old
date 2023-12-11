@@ -82,7 +82,6 @@
 	    <![CDATA[
 		   insert into t_shopping_goods(
 	                goods_id, 
-	                goods_sort,
                     goods_title,
 					goods_price,
 					goods_sales_price,
@@ -91,7 +90,6 @@
 					)
   			values(
   			      #{goods_id},
-  			      #{goods_sort},
   			      #{goods_title},
   			      #{goods_price},
   			      #{goods_sales_price},
@@ -199,9 +197,6 @@
 <update id="updateGoodsInfo" parameterType="java.util.HashMap" >
 	   update t_shopping_goods
 	    <set> 
-	      <if test=" goods_sort!='' and goods_sort!=null">
-	        goods_sort=#{goods_sort},
-	      </if>
 	      <if test=" goods_title!='' and goods_title!=null">
 	        goods_title=#{goods_title},
 	      </if>
