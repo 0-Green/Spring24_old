@@ -47,14 +47,7 @@
 		<div class="tab_container">
 			<div class="tab_content" id="tab1">
 				<table >
-			<tr >
-				<td width=200 >제품분류</td>
-				<td width=500><select name="goods_sort">
-						<option value="컴퓨터와 인터넷" selected>컴퓨터와 인터넷
-						<option value="디지털 기기">디지털 기기
-					</select>
-				</td>
-			</tr>
+
 			<tr >
 				<td >제품이름</td>
 				<td><input name="goods_title" type="text" size="40" /></td>

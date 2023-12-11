@@ -29,9 +29,7 @@
 function fn_modify_goods(goods_id, attribute){
 	var frm_mod_goods=document.frm_mod_goods;
 	var value="";
-	if(attribute=='goods_sort'){
-		value=frm_mod_goods.goods_sort.value;
-	}else if(attribute=='goods_title'){
+	if(attribute=='goods_title'){
 		value=frm_mod_goods.goods_title.value;
 	}else if(attribute=='goods_price'){
 		value=frm_mod_goods.goods_price.value;
