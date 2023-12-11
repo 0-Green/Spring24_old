@@ -46,4 +46,10 @@ public class GoodsDAOImpl  implements GoodsDAO{
 		return imageList;
 	}
 	
+//	   @Override
+//	   public List<GoodsVO> allGoodsList() throws DataAccessException {
+//	      List<GoodsVO> goodsList = (ArrayList)sqlSession.selectList("mapper.goods.allGoodsList");
+//	      return goodsList;
+//	   }
+	
 }

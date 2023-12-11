@@ -84,10 +84,10 @@
 				<!-- drink snack noodle dairy sandwich etc -->
 				  <option value="drink" selected >음료</option>
 				  <option value="snack" >과자</option>
-				  <option value="noodle" >라면</option>
+				  <option value="noodle" >라면/면류</option>
 				  <option value="dairy" >유제품</option>
-				  <option value="sandwich" >샌드위치</option>
-				  <option value="etc" >잡화</option>
+				  <option value="sandwich" >도시락/샌드위치</option>
+				  <option value="etc" >생활잡화</option>
 				</select>
 				</td>
 			</tr>
